@@ -1,0 +1,58 @@
+.cardContainer {
+  background: rgba(32, 40, 62, 0.8);
+  backdrop-filter: blur(80px);
+  border-radius: 12px;
+  padding: 8px;
+  width: 282px;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 1rem;
+line-height: 1.5rem;
+color: #EBEEF5;
+height: 100%;
+  p{
+    margin: 0;
+  }
+  .top {
+    position: relative;
+    img {
+        min-height: 399px;
+      margin: 0;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .rating {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #ffad49;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(1px);
+      border-radius: 8px;
+      padding: 8px;
+      cursor: pointer;
+    }
+  }
+  .footer{
+    margin: 24px 0px;
+    display: flex;
+    justify-content: space-between;
+    .left{
+        .title{
+            width: 81%;
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        .watched{
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        
+    }
+  }
+}

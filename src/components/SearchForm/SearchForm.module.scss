@@ -1,0 +1,46 @@
+.searchContainer {
+  .topTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #beb7fb;
+  }
+  .title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 5rem;
+    color: #ebeef5;
+    margin-bottom: 1.5rem;
+  }
+  form {
+    position: relative;
+    input {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1rem;
+    color: #ebeef5;
+      padding: 24px 54px;
+      width: 344px;
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid #323b54;
+      border-radius: 12px;
+      &::placeholder{
+        color: #475069;
+      }
+    }
+    .searchInput {
+      position: absolute;
+      top: 22px;
+      left: 18px;
+      font-size: 1.4rem;
+      color: #475069;
+      cursor: pointer;
+    }
+  }
+}

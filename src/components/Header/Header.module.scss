@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(18, 24, 41, 0.8);
+  backdrop-filter: blur(40px);
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+    color: #a8aebf;
+    .left {
+      display: flex;
+      .logo {
+        position: relative;
+        .rightLogo {
+          position: absolute;
+          left: 0;
+          z-index: -1;
+        }
+      }
+      .leftMenu {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        a{
+            &:first-of-type{
+                margin-right: 20px;
+            }
+        }
+      }
+    }
+    .right{
+        .rightMenu{
+            a{
+                margin-left: 20px;
+            }
+        }
+    }
+  }
+}
