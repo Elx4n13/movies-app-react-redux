@@ -4,6 +4,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 0.75rem;
+    letter-spacing: 0.2rem;
     line-height: 1rem;
     color: #beb7fb;
   }
@@ -24,13 +25,13 @@
       font-weight: 400;
       font-size: 0.875rem;
       line-height: 1rem;
-    color: #ebeef5;
+      color: #ebeef5;
       padding: 24px 54px;
       width: 344px;
       background: rgba(0, 0, 0, 0.1);
       border: 1px solid #323b54;
       border-radius: 12px;
-      &::placeholder{
+      &::placeholder {
         color: #475069;
       }
     }

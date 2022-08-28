@@ -1,40 +1,21 @@
-import React, { useEffect } from "react";
-import "./Ant.css";
-import styles from "./MoviesList.module.scss";
-import { useParams } from "react-router-dom";
-import MovieApi from "../../apis/MovieApi";
-import { APIKEY } from "../../apis/MovieApiKey";
-import { addMoviesHandle, addFavoritesHandle, img_base_url } from "../../utils";
+import React from "react";
+import styles from "./FavoritesList.module.scss";
 import { useSelector } from "react-redux";
 import { List } from "antd";
 import { useSearchParams } from "react-router-dom";
 import {
-  HeartOutlined,
   HeartTwoTone,
   PlusCircleOutlined,
   StarOutlined,
 } from "@ant-design/icons";
-const MoviesList = () => {
+import { addFavoritesHandle, img_base_url } from "../../utils";
+const FavoritesList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { categories } = useParams();
-  useEffect(() => {
-    const page = searchParams.get("page");
-    const fetchMovies = async () => {
-      const response = await MovieApi.get(
-        `/${categories}?api_key=${APIKEY}&language=tr-TR&page=${page}`
-      ).catch((err) => {
-        console.log(err.message);
-      });
-      const data = response.data;
-      addMoviesHandle(data);
-    };
-    fetchMovies();
-  }, [categories, searchParams]);
-  const { movies } = useSelector((state) => state.movies);
-  const data = movies.results;
+  const { favorites } = useSelector((state) => state.favorites);
+  const data = favorites;
   return (
     <div className={styles.movieListContainer}>
-      <p className={styles.itemsCount}>{movies.total_results} items</p>
+      <p className={styles.itemsCount}>{data.length} items</p>
       <List
         pagination={{
           onChange: (page) => {
@@ -42,7 +23,6 @@ const MoviesList = () => {
           },
           pageSize: 20,
           current: parseInt(searchParams.get("page")),
-          total: movies.total_pages,
           showSizeChanger: false,
         }}
         grid={{
@@ -94,4 +74,4 @@ const MoviesList = () => {
   );
 };
 
-export default MoviesList;
+export default FavoritesList;

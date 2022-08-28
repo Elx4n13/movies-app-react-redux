@@ -34,19 +34,27 @@
         display: flex;
         align-items: center;
         margin-left: 40px;
-        a{
-            &:first-of-type{
-                margin-right: 20px;
-            }
+        a {
+          &:first-of-type {
+            margin-right: 20px;
+          }
         }
       }
     }
-    .right{
-        .rightMenu{
-            a{
-                margin-left: 20px;
-            }
+    .right {
+      .rightMenu {
+        a {
+          margin-left: 20px;
         }
+      }
     }
+  }
+}
+
+.headerColor {
+  background-color: #000;
+  z-index: 122;
+  .navColor {
+    color: white;
   }
 }
