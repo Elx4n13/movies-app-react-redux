@@ -47,7 +47,9 @@ const MoviesList = () => {
   const { watchList } = useSelector((state) => state.watchList);
   return (
     <div className={styles.movieListContainer}>
-      <p className={styles.itemsCount}>{movies.total_results} items</p>
+      <p className={styles.itemsCount}>
+        {movies.total_results ? movies.total_results : 1} items
+      </p>
       <List
         pagination={{
           onChange: (page) => {
