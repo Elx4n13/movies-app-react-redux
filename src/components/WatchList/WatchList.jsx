@@ -1,9 +1,3 @@
-import React from "react";
-import styles from "./FavoritesList.module.scss";
-import "./Empty.css";
-import { useSelector } from "react-redux";
-import { List } from "antd";
-import { useSearchParams, useNavigate } from "react-router-dom";
 import {
   CheckCircleTwoTone,
   HeartOutlined,
@@ -11,21 +5,27 @@ import {
   PlusCircleOutlined,
   StarOutlined,
 } from "@ant-design/icons";
+import React from "react";
+import styles from "./WatchList.module.scss";
+import { List } from "antd";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import {
   addFavoritesHandle,
   addWatchListHandle,
-  deleteFavoritesHandle,
   deleteWatchListHandle,
+  deleteFavoritesHandle,
   img_base_url,
 } from "../../utils";
-const FavoritesList = () => {
+import { useSelector } from "react-redux";
+
+const WatchList = () => {
   const notImg =
     "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png";
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { watchList } = useSelector((state) => state.watchList);
   const { favorites } = useSelector((state) => state.favorites);
-  const data = favorites;
+  const { watchList } = useSelector((state) => state.watchList);
+  const data = watchList;
   return (
     <div className={styles.movieListContainer}>
       <p className={styles.itemsCount}>{data.length} items</p>
@@ -65,7 +65,6 @@ const FavoritesList = () => {
                 />
                 <div className={styles.rating}>
                   <p>
-                    {" "}
                     <StarOutlined /> {item.vote_average}
                   </p>
                 </div>
@@ -129,4 +128,4 @@ const FavoritesList = () => {
   );
 };
 
-export default FavoritesList;
+export default WatchList;

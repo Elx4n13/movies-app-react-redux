@@ -4,18 +4,29 @@ import styles from "./MoviesList.module.scss";
 import { useParams } from "react-router-dom";
 import MovieApi from "../../apis/MovieApi";
 import { APIKEY } from "../../apis/MovieApiKey";
-import { addMoviesHandle, addFavoritesHandle, img_base_url } from "../../utils";
+import {
+  addWatchListHandle,
+  deleteWatchListHandle,
+  addMoviesHandle,
+  deleteFavoritesHandle,
+  addFavoritesHandle,
+  img_base_url,
+} from "../../utils";
 import { useSelector } from "react-redux";
 import { List } from "antd";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import {
+  CheckCircleTwoTone,
   HeartOutlined,
   HeartTwoTone,
   PlusCircleOutlined,
   StarOutlined,
 } from "@ant-design/icons";
 const MoviesList = () => {
+  const notImg =
+    "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png";
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const { categories } = useParams();
   useEffect(() => {
     const page = searchParams.get("page");
@@ -31,7 +42,9 @@ const MoviesList = () => {
     fetchMovies();
   }, [categories, searchParams]);
   const { movies } = useSelector((state) => state.movies);
-  const data = movies.results;
+  const data = movies.results || [movies];
+  const { favorites } = useSelector((state) => state.favorites);
+  const { watchList } = useSelector((state) => state.watchList);
   return (
     <div className={styles.movieListContainer}>
       <p className={styles.itemsCount}>{movies.total_results} items</p>
@@ -41,7 +54,7 @@ const MoviesList = () => {
             setSearchParams({ page: `${page}` });
           },
           pageSize: 20,
-          current: parseInt(searchParams.get("page")),
+          current: parseInt(searchParams.get("page")) || 1,
           total: movies.total_pages,
           showSizeChanger: false,
         }}
@@ -58,32 +71,73 @@ const MoviesList = () => {
         renderItem={(item) => (
           <List.Item>
             <div className={styles.cardContainer}>
-              <div className={styles.top}>
-                <img src={img_base_url + item.poster_path} alt="poster img" />
+              <div
+                className={styles.top}
+                onClick={() => {
+                  navigate(`/movie/${item.id}`);
+                }}
+              >
+                <img
+                  src={
+                    item.poster_path ? img_base_url + item.poster_path : notImg
+                  }
+                  alt="poster img"
+                />
                 <div className={styles.rating}>
                   <p>
-                    {" "}
                     <StarOutlined /> {item.vote_average}
                   </p>
                 </div>
               </div>
               <div className={styles.footer}>
-                <div className={styles.left}>
+                <div
+                  className={styles.left}
+                  onClick={() => {
+                    navigate(`/movie/${item.id}`);
+                  }}
+                >
                   <p className={styles.title}>{item.title}</p>
                   <p>{item.release_date}</p>
                 </div>
                 <div className={styles.right}>
-                  <p className={styles.watched}>
-                    <PlusCircleOutlined />
-                  </p>
-                  <p
-                    className={styles.heart}
-                    onClick={() => {
-                      addFavoritesHandle(item);
-                    }}
-                  >
-                    <HeartTwoTone />
-                  </p>
+                  {watchList.find((movie) => movie.id === item.id) ? (
+                    <p
+                      className={styles.watched}
+                      onClick={() => {
+                        deleteWatchListHandle(item.id);
+                      }}
+                    >
+                      <CheckCircleTwoTone />
+                    </p>
+                  ) : (
+                    <p
+                      className={styles.watched}
+                      onClick={() => {
+                        addWatchListHandle(item);
+                      }}
+                    >
+                      <PlusCircleOutlined />
+                    </p>
+                  )}
+                  {favorites.find((movie) => movie.id === item.id) ? (
+                    <p
+                      className={styles.heart}
+                      onClick={() => {
+                        deleteFavoritesHandle(item.id);
+                      }}
+                    >
+                      <HeartTwoTone />
+                    </p>
+                  ) : (
+                    <p
+                      className={styles.heart}
+                      onClick={() => {
+                        addFavoritesHandle(item);
+                      }}
+                    >
+                      <HeartOutlined />
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

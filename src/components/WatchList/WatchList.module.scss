@@ -57,7 +57,6 @@
         cursor: pointer;
         &:hover {
           color: yellow;
-          transition: 0.6s all;
         }
         .title {
           max-width: 170px;
@@ -70,7 +69,6 @@
         .watched {
           margin-right: 10px;
           cursor: pointer;
-          transition: all 1s;
         }
         .heart {
           cursor: pointer;

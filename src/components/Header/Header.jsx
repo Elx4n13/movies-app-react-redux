@@ -33,7 +33,7 @@ const Header = () => {
               Favorites
             </NavLink>
             <NavLink
-              to="/"
+              to="/watch_list?page=1"
               style={({ isActive }) => ({
                 color: isActive ? "green" : null,
               })}
