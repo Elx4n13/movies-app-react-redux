@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { APIKEY } from "../../apis/MovieApiKey";
 import { useSelector } from "react-redux";
+import "../../Ant.css";
 import styles from "./SearchList.module.scss";
 import { List } from "antd";
 import {

@@ -1,0 +1,33 @@
+.ant-row > div {
+  display: flex;
+  margin-top: 20px;
+}
+.ant-col {
+  display: flex;
+}
+.ant-list-grid .ant-col > .ant-list-item {
+  display: flex;
+}
+.ant-row > div :nth-of-type(4n) {
+  margin-right: 0;
+}
+@media(max-width:575px){
+  .ant-col {
+    justify-content: center;
+  }
+  .ant-pagination-prev{
+    min-width: 20px;
+  }
+  .ant-pagination-jump-prev{
+    min-width: 20px;
+  }
+  .ant-pagination-item{
+    min-width: 20px;
+  }
+  .ant-pagination-next{
+    min-width: 20px;
+  }
+  .ant-pagination-jump-next{
+    min-width: 20px;
+  }
+}

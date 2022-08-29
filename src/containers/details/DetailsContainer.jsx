@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./DetailsContainer.module.scss";
+import "../../Ant.css";
+import'./ANTDetail.css'
 import { useParams, useSearchParams, useNavigate } from "react-router-dom";
-
 import MovieApi from "../../apis/MovieApi";
 import { APIKEY } from "../../apis/MovieApiKey";
 import {
@@ -174,14 +175,15 @@ const DetailsContainer = () => {
                 onChange: (page) => {
                   setSearchParams({ page: `${page}` });
                 },
+                total:18,
                 current: parseInt(searchParams.get("page")) || 1,
                 pageSize: 3,
               }}
               grid={{
                 gutter: 36,
                 xs: 1,
-                sm: 2,
-                md: 3,
+                sm: 1,
+                md: 2,
                 lg: 3,
                 xl: 3,
                 xxl: 3,

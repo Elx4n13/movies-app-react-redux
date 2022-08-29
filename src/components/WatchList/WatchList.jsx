@@ -9,6 +9,7 @@ import React from "react";
 import styles from "./WatchList.module.scss";
 import { List } from "antd";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import "../../Ant.css";
 import {
   addFavoritesHandle,
   addWatchListHandle,

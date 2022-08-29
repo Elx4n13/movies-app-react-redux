@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  z-index: 122;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,10 +42,16 @@
         }
       }
     }
-    .right {
-      .rightMenu {
-        a {
-          margin-left: 20px;
+    .secondRight{
+      display: none;
+    }
+    .firstRight{
+
+      .right {
+        .rightMenu {
+          a {
+            margin-left: 20px;
+          }
         }
       }
     }
@@ -53,8 +60,51 @@
 
 .headerColor {
   background-color: #000;
-  z-index: 122;
   .navColor {
     color: white;
   }
+}
+
+@media (max-width:870px){
+  .header {
+    .navbar {
+      .secondRight{
+        display: flex;
+        .right {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: 555;
+          background-color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .close{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            color: red;
+            font-size: 2rem;
+          }
+          .rightMenu {
+            display: flex;
+            flex-direction: column;
+            a {
+              text-align: center;
+              border-bottom: 1px solid blue;
+              margin-top: 20px;
+              width: 100%;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .firstRight{
+        display: none;
+      }
+    }
+  }
+  
 }

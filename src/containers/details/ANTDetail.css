@@ -1,0 +1,26 @@
+@media(max-width:750px){
+    .ant-col {
+      justify-content: center;
+    }
+  }
+
+  @media(max-width:575px){
+    .ant-col {
+      justify-content: center;
+    }
+    .ant-pagination-prev{
+      min-width: 20px;
+    }
+    .ant-pagination-jump-prev{
+      min-width: 20px;
+    }
+    .ant-pagination-item{
+      min-width: 20px;
+    }
+    .ant-pagination-next{
+      min-width: 20px;
+    }
+    .ant-pagination-jump-next{
+      min-width: 20px;
+    }
+  }

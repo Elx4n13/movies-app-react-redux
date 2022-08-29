@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-
+  font-size: 16px;
   .main {
     width: 90%;
     .backdrop {
@@ -11,35 +11,35 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 500px;
+      height: 31.25em;
       border-radius: 40px;
       background-position: center;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       .titleContent {
         position: absolute;
-        left: 80px;
-        bottom: -75px;
+        left: 5em;
+        bottom: -4.6875em;
         background: rgba(32, 40, 62, 0.8);
         backdrop-filter: blur(24px);
         border-radius: 24px;
         .titles {
-          padding: 40px;
-          width: 560px;
+          padding: 2.5em;
+          width: 35em;
           .top {
             font-family: "Poppins";
             font-style: normal;
             font-weight: 400;
-            font-size: 0.75rem;
-            line-height: 1rem;
+            font-size: 0.75em;
+            line-height: 1em;
             color: #beb7fb;
           }
           .bottom {
             font-family: "Poppins";
             font-style: normal;
             font-weight: 600;
-            font-size: 2rem;
-            line-height: 2.5rem;
+            font-size: 2em;
+            line-height: 2.5em;
             color: #ebeef5;
             p {
               margin-bottom: 0;
@@ -49,19 +49,19 @@
       }
     }
     .movieContent {
-      margin-left: 80px;
-      margin-right: 80px;
-      margin-top: 150px;
-      margin-bottom: 50px;
+      margin-left: 5em;
+      margin-right: 5em;
+      margin-top: 9.375em;
+      margin-bottom: 8.33333em;
       .detailContent {
         display: flex;
         .left {
-          margin-right: 80px;
-          border-radius: 24px;
+          margin-right: 5em;
+          border-radius: 1.5em;
           width: fit-content;
           img {
             height: 100%;
-            width: 480px;
+            width: 30em;
             border-radius: 24px;
           }
         }
@@ -71,13 +71,13 @@
             margin: 0;
           }
           .tagline {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
             p {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 700;
-              font-size: 1.5rem;
-              line-height: 2rem;
+              font-size: 1.5em;
+              line-height: 2em;
               color: #ebeef5;
             }
           }
@@ -85,102 +85,102 @@
             font-family: "Poppins";
             font-style: normal;
             font-weight: 400;
-            font-size: 1.25rem;
-            line-height: 2rem;
+            font-size: 1.2em;
+            line-height: 2em;
             color: #8e95a9;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
           }
           .rating {
             width: fit-content;
-            padding: 0.5rem;
+            padding: 0.5em;
             font-family: "Poppins";
             font-style: normal;
             font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.5rem;
+            font-size: 1em;
+            line-height: 1.5em;
             color: #ffad49;
             background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(8px);
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
           }
           .type {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
             .typeTitle {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1rem;
-              line-height: 1.5rem;
+              font-size: 1em;
+              line-height: 1.5em;
               color: #767e94;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.5em;
             }
             .typeName {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1.25rem;
-              line-height: 2rem;
+              font-size: 1.25em;
+              line-height: 2em;
               color: #c3c8d4;
             }
           }
           .release {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
             .top {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1rem;
-              line-height: 1.5rem;
+              font-size: 1em;
+              line-height: 1.5em;
               color: #767e94;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.5em;
             }
             .bottom {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1.25rem;
-              line-height: 2rem;
+              font-size: 1.25em;
+              line-height: 2em;
               color: #c3c8d4;
             }
           }
           .runTime {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
             .top {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1rem;
-              line-height: 1.5rem;
+              font-size: 1em;
+              line-height: 1.5em;
               color: #767e94;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.5em;
             }
             .bottom {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1.25rem;
-              line-height: 2rem;
+              font-size: 1.25em;
+              line-height: 2em;
               color: #c3c8d4;
             }
           }
           .genres {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5em;
             .top {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1rem;
-              line-height: 1.5rem;
+              font-size: 1em;
+              line-height: 1.5em;
               color: #767e94;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.5em;
             }
             .bottom {
               font-family: "Poppins";
               font-style: normal;
               font-weight: 400;
-              font-size: 1.25rem;
-              line-height: 2rem;
+              font-size: 1.25em;
+              line-height: 2em;
               color: #c3c8d4;
             }
           }
@@ -188,9 +188,9 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            font-size: 2rem;
+            font-size: 2em;
             .watched {
-              margin-right: 10px;
+              margin-right: 0.625em;
               cursor: pointer;
               transition: all 1s;
             }
@@ -209,26 +209,26 @@
       }
     }
     .similarContent {
-      margin-top: 50px;
+      margin-top: 3.125em;
       .similarTitle {
         font-family: "Poppins";
         font-style: normal;
         font-weight: 600;
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2em;
+        line-height: 2.5em;
         color: #ebeef5;
       }
       .cardContainer {
         background: rgba(32, 40, 62, 0.8);
         backdrop-filter: blur(80px);
         border-radius: 12px;
-        padding: 8px;
-        width: 282px;
+        padding: 0.5em;
+        width: 17.625em;
         font-family: "Poppins";
         font-style: normal;
         font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 1em;
+        line-height: 1.5em;
         color: #ebeef5;
         height: 100%;
         p {
@@ -296,5 +296,55 @@
         }
       }
     }
+  }
+}
+@media (max-width:1300px){
+
+  .detailsContainer{
+    font-size:14px;
+  }
+}
+@media (max-width:1100px){
+
+  .detailsContainer{
+    font-size:12px;
+  }
+}
+@media (max-width:875px){
+
+  .detailsContainer{
+    font-size:10px;
+  }
+}
+@media (max-width:750px){
+
+  .detailsContainer{
+    .main{
+      .movieContent{
+        .detailContent{
+          display: flex;
+          flex-direction: column;
+          .left{
+            width: 100%;
+            img{
+              height: 40em;
+              width: 100%;
+            }
+          }
+          .right{
+            margin-top: 2em;
+            .footer{
+              font-size: 3em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:550px){
+
+  .detailsContainer{
+    font-size:8px;
   }
 }

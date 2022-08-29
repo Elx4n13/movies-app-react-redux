@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Ant.css";
+import "../../Ant.css";
 import styles from "./MoviesList.module.scss";
 import { useParams } from "react-router-dom";
 import MovieApi from "../../apis/MovieApi";

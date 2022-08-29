@@ -1,4 +1,5 @@
 import React from "react";
+import "../../Ant.css";
 import styles from "./FavoritesList.module.scss";
 import "./Empty.css";
 import { useSelector } from "react-redux";

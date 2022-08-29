@@ -3,8 +3,11 @@ import styles from "./Header.module.scss";
 import Left from "../../images/vectorLeft.png";
 import Right from "../../images/vectorRight.png";
 import { NavLink } from "react-router-dom";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import Links from "../Links/Links";
 
 const Header = () => {
+  const [menu,setMenu] = useState (false)
   const [bgColor, setBgColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 40) {
@@ -42,49 +45,26 @@ const Header = () => {
             </NavLink>
           </div>
         </div>
+        <div className={styles.firstRight}>
         <div className={styles.right}>
           <div className={styles.rightMenu}>
-            <NavLink
-              to="/latest?page=1"
-              style={({ isActive }) => ({
-                color: isActive ? "green" : null,
-              })}
-            >
-              Latest
-            </NavLink>
-            <NavLink
-              to="/now_playing?page=1"
-              style={({ isActive }) => ({
-                color: isActive ? "green" : null,
-              })}
-            >
-              Now Playing
-            </NavLink>
-            <NavLink
-              to="/popular?page=1"
-              style={({ isActive }) => ({
-                color: isActive ? "green" : null,
-              })}
-            >
-              Popular
-            </NavLink>
-            <NavLink
-              to="/top_rated?page=1"
-              style={({ isActive }) => ({
-                color: isActive ? "green" : null,
-              })}
-            >
-              Top Rated
-            </NavLink>
-            <NavLink
-              to="/upcoming?page=1"
-              style={({ isActive }) => ({
-                color: isActive ? "green" : null,
-              })}
-            >
-              Upcoming
-            </NavLink>
+          <Links/>
           </div>
+        </div>    
+        </div>
+        <div className={styles.secondRight}>
+          <div className={styles.burger} style={{display:menu ? 'none':'block'}} onClick={()=>{
+            setMenu(!menu)
+          }}><MenuOutlined /></div>
+          <div className={styles.right} style={{display:menu? 'flex':'none'}} onClick={()=>{
+            setMenu(!menu)
+          }}>
+          <CloseOutlined className={styles.close} />
+            <div className={styles.rightMenu}>
+              <Links/>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
