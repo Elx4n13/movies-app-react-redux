@@ -42,11 +42,10 @@
         }
       }
     }
-    .secondRight{
+    .secondRight {
       display: none;
     }
-    .firstRight{
-
+    .firstRight {
       .right {
         .rightMenu {
           a {
@@ -65,10 +64,10 @@
   }
 }
 
-@media (max-width:870px){
+@media (max-width: 870px) {
   .header {
     .navbar {
-      .secondRight{
+      .secondRight {
         display: flex;
         .right {
           position: absolute;
@@ -81,7 +80,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          .close{
+          .close {
             position: absolute;
             top: 50px;
             right: 50px;
@@ -101,10 +100,9 @@
           }
         }
       }
-      .firstRight{
+      .firstRight {
         display: none;
       }
     }
   }
-  
 }

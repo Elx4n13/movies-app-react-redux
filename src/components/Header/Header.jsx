@@ -7,7 +7,7 @@ import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 import Links from "../Links/Links";
 
 const Header = () => {
-  const [menu,setMenu] = useState (false)
+  const [menu, setMenu] = useState(false);
   const [bgColor, setBgColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 40) {
@@ -46,25 +46,34 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.firstRight}>
-        <div className={styles.right}>
-          <div className={styles.rightMenu}>
-          <Links/>
-          </div>
-        </div>    
-        </div>
-        <div className={styles.secondRight}>
-          <div className={styles.burger} style={{display:menu ? 'none':'block'}} onClick={()=>{
-            setMenu(!menu)
-          }}><MenuOutlined /></div>
-          <div className={styles.right} style={{display:menu? 'flex':'none'}} onClick={()=>{
-            setMenu(!menu)
-          }}>
-          <CloseOutlined className={styles.close} />
+          <div className={styles.right}>
             <div className={styles.rightMenu}>
-              <Links/>
+              <Links />
             </div>
           </div>
-
+        </div>
+        <div className={styles.secondRight}>
+          <div
+            className={styles.burger}
+            style={{ display: menu ? "none" : "block" }}
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <MenuOutlined />
+          </div>
+          <div
+            className={styles.right}
+            style={{ display: menu ? "flex" : "none" }}
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <CloseOutlined className={styles.close} />
+            <div className={styles.rightMenu}>
+              <Links />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./DetailsContainer.module.scss";
 import "../../Ant.css";
-import'./ANTDetail.css'
+import "./ANTDetail.css";
 import { useParams, useSearchParams, useNavigate } from "react-router-dom";
 import MovieApi from "../../apis/MovieApi";
 import { APIKEY } from "../../apis/MovieApiKey";
@@ -175,7 +175,7 @@ const DetailsContainer = () => {
                 onChange: (page) => {
                   setSearchParams({ page: `${page}` });
                 },
-                total:18,
+                total: 18,
                 current: parseInt(searchParams.get("page")) || 1,
                 pageSize: 3,
               }}

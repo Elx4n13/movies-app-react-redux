@@ -11,23 +11,23 @@
 .ant-row > div :nth-of-type(4n) {
   margin-right: 0;
 }
-@media(max-width:575px){
+@media (max-width: 575px) {
   .ant-col {
     justify-content: center;
   }
-  .ant-pagination-prev{
+  .ant-pagination-prev {
     min-width: 20px;
   }
-  .ant-pagination-jump-prev{
+  .ant-pagination-jump-prev {
     min-width: 20px;
   }
-  .ant-pagination-item{
+  .ant-pagination-item {
     min-width: 20px;
   }
-  .ant-pagination-next{
+  .ant-pagination-next {
     min-width: 20px;
   }
-  .ant-pagination-jump-next{
+  .ant-pagination-jump-next {
     min-width: 20px;
   }
 }
