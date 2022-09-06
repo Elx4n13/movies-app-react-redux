@@ -35,7 +35,7 @@ const SearchList = () => {
     const query = searchParams.get("query");
     const fetchMovies = async () => {
       const response = await SearchApi.get(
-        `/?api_key=${APIKEY}&language=tr-TR&query=${query}`
+        `?api_key=${APIKEY}&language=tr-TR&query=${query}`
       ).catch((err) => {
         console.log(err.message);
       });
