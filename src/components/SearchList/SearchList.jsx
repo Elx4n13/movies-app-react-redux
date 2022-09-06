@@ -30,12 +30,12 @@ const SearchList = () => {
 
   useEffect(() => {
     const SearchApi = axios.create({
-      baseURL: "https://api.themoviedb.org/3/search/movie",
+      baseURL: "https://api.themoviedb.org/3/search/",
     });
     const query = searchParams.get("query");
     const fetchMovies = async () => {
       const response = await SearchApi.get(
-        `?api_key=${APIKEY}&language=tr-TR&query=${query}`
+        `movie?api_key=${APIKEY}&language=tr-TR&query=${query}`
       ).catch((err) => {
         console.log(err.message);
       });
